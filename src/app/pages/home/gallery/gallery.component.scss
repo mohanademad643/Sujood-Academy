@@ -1,0 +1,137 @@
+:host{
+  .gallery-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+    .section-title {
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .section-desc {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+
+::ng-deep .p-galleria {
+
+  .p-galleria-item img {
+    max-height: 80vh;
+    border-radius: 1rem;
+  }
+
+  .p-galleria-item-nav {
+ gap: 2rem;
+ margin: 1.4rem; 
+  
+    z-index: 5;
+      background-color: var(--secondary-color) !important;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    .p-icon-wrapper .p-icon {
+      width: 1.5rem;
+     height: 1.5rem;
+           color: var(--primary-color) !important;
+    }
+    @media (max-width:600px) {
+ margin: 1.5rem 65% 0 15px; 
+    margin-top: -78%;
+      
+    }
+  }
+
+  .p-galleria-close {
+    background-color: var(--secondary-color) !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: .5rem;
+
+    .p-icon-wrapper .p-icon {
+     width: 1.2rem;
+     height: 1.2rem;
+           color: var(--primary-color) !important;
+    }
+  }
+}
+
+
+      .thumbnail {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        &:hover{
+           .play-btn,.overlay{
+            opacity: 1;
+           }
+           img{
+             transform: scale(1.05);
+           }
+        }
+
+        img {
+          width: 100%;
+          
+            transition: transform 0.4s ease;
+         &:hover{
+          transform: scale(1.05);
+         }
+
+        }
+
+        .overlay {
+         
+          position: absolute;
+          inset: 0;
+          background-color:   rgba(59, 10, 69, 0.6);
+          border-radius: 1rem 1rem 0 0;
+
+
+        }
+        .play-btn,.overlay{
+           transition: all .3s ease;
+          opacity: 0;
+        }
+
+        .play-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: var(--primary-color);
+          color: var(--secondary-color);
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+          z-index: 2;
+
+          &:hover {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+          }
+        }
+      }
+
+}
